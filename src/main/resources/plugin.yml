@@ -1,0 +1,32 @@
+name: EventGacha
+version: 1.1
+api-version: 1.15
+description: event gacha.
+author: kubotan
+main: space.gorogoro.eventgacha.EventGacha
+
+commands:
+  eventgacha:
+    description: Commands to manage your event gacha
+    usage: |
+      Use /help eventgacha [subcommand] for more information
+      /<command> list - List all gacha
+      /<command> modify <gacha_name> - Modify a gacha
+      /<command> delete <gacha_name> - Delete a gacha
+      /<command> ticket <player_name> - Issue a ticket
+  eventgacha list:
+    description: List all gacha
+    aliases: [gacha l]
+    usage: /<command> list
+  eventgacha modify:
+    description: Modify a gacha chest
+    aliases: [gacha m]
+    usage: /<command> modify <gacha_name>
+  eventgacha delete:
+    description: Delete a gacha
+    aliases: [gacha d]
+    usage: /<command> delete <gacha_name>
+  eventgacha ticket:
+    description: Issue a ticket
+    aliases: [gacha t]
+    usage: /<command> ticket <player_name>
