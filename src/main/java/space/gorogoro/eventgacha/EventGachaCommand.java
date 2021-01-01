@@ -124,23 +124,12 @@ public class EventGachaCommand {
    * Processing of command ticket.
    * @return boolean true:Success false:Failure
    */
-  public boolean ticket() {
+  public boolean ticket(Player p) {
     if(args.length != 2) {
       return false;
     }
 
-    String playerName = args[1];
-    Player player = null;
-    for(Player cur:gacha.getServer().getOnlinePlayers()) {
-      if(cur.getName().equals(playerName)) {
-        player = cur;
-      }
-    }
-    if(player == null) {
-      return false;
-    }
-
-    int emptySlot = player.getInventory().firstEmpty();
+    int emptySlot = p.getInventory().firstEmpty();
     if (emptySlot == -1) {
       // not empty
       return false;
@@ -155,9 +144,9 @@ public class EventGachaCommand {
     lore.add("スクラッチ:  " + ChatColor.RESET + ChatColor.MAGIC + EVENT_HALLOWEEN_CODE + ChatColor.RESET);
     im.setLore(lore);
     ticket.setItemMeta(im);
-    player.getInventory().setItem(emptySlot, ticket);
+    p.getInventory().setItem(emptySlot, ticket);
 
-    EventGachaUtility.sendMessage(sender, "Issue a ticket. player_name=" + playerName);
+    EventGachaUtility.sendMessage(sender, "Issue a ticket. player_name=" +  p.getDisplayName());
     return true;
   }
 

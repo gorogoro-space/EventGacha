@@ -4,7 +4,7 @@
 
   <groupId>space.gorogoro</groupId>
   <artifactId>EventGacha</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
   <packaging>jar</packaging>
   <name>EventGacha</name>
 
