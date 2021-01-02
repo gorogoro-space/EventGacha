@@ -1,2 +1,4 @@
 # EventGacha
-EventGacha
+EventGachaはGachaをペースとしたイベント用のガチャです。
+Gachaとの違いは/eventgacha ticket @p等で発行できるチケットに重複することのない一意の
+チケットコードが書き込まれていないために/iteminfoでアイテムIDを取得すれば個人商店やAdminShopなどでチケットを販売することができます。
